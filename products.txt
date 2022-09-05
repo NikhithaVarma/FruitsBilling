@@ -1,0 +1,10 @@
+Apple,220
+Orange,120
+Pomegrante,280
+Mosambi,100
+Grapes,100
+Chikoo,150
+Strawberry,250
+Pineapple,60
+Papaya,50
+
