@@ -2,18 +2,16 @@
 module name: purchase
 function name: purchase
 overview of this function:
-1) Customer interaction for what and how much the want buy.
-2) check the user interaction valid or not with exception handelling.
-3) calculating the customer purchase product with discount(if discountable)
-4) show the last update of the product
-5) write the invoice for customer with unique naming
+  calculating the customer purchase product with discount(if discountable)
+  show the last update of the product
+  write the invoice for customer with unique naming
 """
 
 
 def purchase(List):
     L = List  # assign list with variable name 'L'.
     a_name = input("Please enter your name: ")
-    print("\nHello " + a_name + "! Welcome to our Electronic Store.\nPlease select product as per your choice.")
+    print("\nHello " + a_name + "! Welcome to our Fruit Store.\nPlease select product as per your choice.")
     q = {}  # assign empty dictionary with variable name 'q'.
     flag = "Y"
     while flag.upper() == "Y":  # check and go if flag is 'Y' or 'y'.
