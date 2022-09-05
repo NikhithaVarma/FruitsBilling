@@ -53,32 +53,27 @@ def purchase(List):
             print("--------------------------------------------")
 
     print("\nYou Choosed Items and it's Quantity respectively:\n", q, "\n")
-    '''
-        In the following operation:
-        1) change every string value in the upper case latter.
-        2) check what is the product entered by customer.
-        3) executes respective condition if product is phone or laptop or hdd entered by customer.
-    '''
+    
     f_amount = 0  # final amount
     for keys in q.keys():
-        if keys == L[0][0].upper():  # executes this operation if product is phone entered by customer.
+        if keys == L[0][0].upper():  # executes this operation if product is apple entered by customer.
             p_price = int(L[0][1])
             p_num = int(q[keys])
             p_amount = (p_price * p_num)
             f_amount += (p_price * p_num)
-            print("\nTotal cost for phone: ", p_amount)
-        elif keys == L[1][0].upper():  # executes this operation if product is laptop entered by customer.
+            print("\nTotal cost for Apple: ", p_amount)
+        elif keys == L[1][0].upper():  # executes this operation if product is Orange entered by customer.
             l_price = int(L[1][1])
             l_num = int(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
-            print("Total cost for laptop: ", l_amount)
-        else:  # executes this operation if product is hdd entered by customer.
+            print("Total cost for Orange: ", l_amount)
+        else:  # executes this operation if product is Pomegrante entered by customer.
             h_price = int(L[2][1])
             h_num = int(q[keys])
             h_amount = (h_price * h_num)
             f_amount += (h_price * h_num)
-            print("Total cost for HDD: ", h_amount)
+            print("Total cost for Pomegrante: ", h_amount)
     print("\nYour discountable total amount is: ", f_amount)
 
     '''
@@ -146,7 +141,7 @@ def purchase(List):
 
     file = open(invoice + " (" + a_name + ").txt", "w")  # generate a unique invoive name and open it in write mode.
     file.write("=============================================================")
-    file.write("\nELECTRONIC STORE\t\t\t\tINVOICE")
+    file.write("\Siri Farm Fresh Fruits\t\t\t\tINVOICE")
     file.write("\n\nInvoice: " + invoice + "\t\tDate: " + d + "\n\t\t\t\t\tTime: " + e + "")
     file.write("\nName of Customer: " + str(a_name) + "")
     file.write("\n=============================================================")
@@ -154,15 +149,15 @@ def purchase(List):
     file.write("\n-------------------------------------------------------------")
 
     for keys in q.keys():  # In this loop, write in a file only those product which is purchase by user.
-        if keys == "PHONE":
+        if keys == "Apple":
             file.write(
-                str("\n" + str(keys) + " \t\t " + str(q['PHONE']) + " \t\t " + str(L[0][1]) + " \t\t " + str(p_amount)))
-        elif keys == "LAPTOP":
+                str("\n" + str(keys) + " \t\t " + str(q['Apple']) + " \t\t " + str(L[0][1]) + " \t\t " + str(p_amount)))
+        elif keys == "Orange":
             file.write(str(
-                "\n" + str(keys) + " \t\t " + str(q['LAPTOP']) + " \t\t " + str(L[1][1]) + " \t\t " + str(l_amount)))
+                "\n" + str(keys) + " \t\t " + str(q['Orange']) + " \t\t " + str(L[1][1]) + " \t\t " + str(l_amount)))
         else:
             file.write(
-                str("\n" + str(keys) + " \t\t " + str(q['HDD']) + " \t\t " + str(L[2][1]) + " \t\t " + str(h_amount)))
+                str("\n" + str(keys) + " \t\t " + str(q['Pomegrante']) + " \t\t " + str(L[2][1]) + " \t\t " + str(h_amount)))
 
     file.write("\n\n-------------------------------------------------------------")
     file.write("\n\t\t\tYour discountable amount: " + str(f_amount))
